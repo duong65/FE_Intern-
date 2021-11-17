@@ -1,0 +1,164 @@
+$color-white: #ffffff;
+$color-title: #99a9b5;
+$bg-color: #cad3d3;
+
+@mixin Circle__price {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+body {
+  font-family: "Source Sans Pro Light";
+  background-color: $bg-color;
+  .container {
+    .grid__container {
+      display: grid;
+      grid-template-columns: auto auto auto;
+      margin: 180px 375px;
+      .grid__item {
+        background-position: center;
+        background-size: cover;
+        opacity: 0.7;
+        position: relative;
+        line-height: 20px;
+        height: 280px;
+        text-align: center;
+        &:first-child {
+          background-image: url(../images/ocean.png);
+          &:before {
+            @include Circle__price;
+          }
+        }
+        &:nth-child(2) {
+          background-image: url(../images/mountain.png);
+          &:before {
+            @include Circle__price;
+          }
+        }
+        &:nth-child(3) {
+          background-image: url(../images/forest.png);
+          &:before {
+            @include Circle__price;
+          }
+        }
+        &:nth-child(3n) {
+          margin-left: 30px;
+        }
+        &:nth-child(3n-1) {
+          margin: 0 15px;
+        }
+        &:nth-child(3n-2) {
+          margin-right: 30px;
+        }
+        &:nth-child(even) {
+          .grid__item__price {
+            background-color: #2c2e3d;
+          }
+        }
+        .grid__item__price {
+          position: absolute;
+          background: #ffffff;
+          clip-path: circle(50%);
+          left: 50%;
+          transform: translate(-50%, -50%);
+          height: 120px;
+          width: 120px;
+          &__main {
+            padding-top: 33%;
+            font-size: 2rem;
+            &_total {
+              &:first-child {
+                color: #309df8;
+              }
+              &:nth-child(even) {
+                color: #d74498;
+              }
+              &:last-child {
+                color: #32ad1e;
+              }
+            }
+          }
+          &__title {
+            font-size: 1rem;
+            line-height: 40px;
+            color: $color-title;
+          }
+        }
+        .grid__item__content {
+          font-size: 2.25rem;
+          font-family: "Montserrat UltraLight";
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          color: $color-white;
+          &_sub {
+            font-size: 0.75rem;
+            color: #b6c6c9;
+          }
+        }
+        .grid__item__new {
+          background-image: url(../images/newmark.png);
+          background-position: center;
+          background-size: cover;
+          position: absolute;
+          font-family: "Montserrat Bold";
+          font-size: 0.75rem;
+          width: 80px;
+          top: -16px;
+          left: -16px;
+          line-height: 80px;
+          color: $color-white;
+        }
+        .grid__item__list {
+          font-family: "Source Sans Pro Regular";
+          color: #5f727f;
+          font-weight: 500;
+          background-color: $color-white;
+          font-size: 1rem;
+          line-height: 3.125rem;
+          li {
+            &:first-child {
+              font-size: 1.6rem;
+              font-weight: normal;
+            }
+            &:nth-child(2n) {
+              background: #f4f6f7;
+            }
+            &:last-child {
+              position: relative;
+              height: 150px;
+            }
+            .button {
+              position: absolute;
+              text-transform: uppercase;
+              font-size: 1.1875rem;
+              color: #2196f7;
+              text-align: center;
+              border: 1px solid #2196f7;
+              width: 50%;
+              top: 50%;
+              left: 50%;
+              transform: translate(-50%, -50%);
+              &:hover {
+                background-color: #6c136f;
+                border: 1px solid #6c136f;
+                color: $color-white;
+                cursor: pointer;
+              }
+            }
+          }
+          .grid__item__subtitle {
+            font-size: 0.875rem;
+            color: $color-title;
+          }
+        }
+      }
+    }
+  }
+}
