@@ -1,0 +1,74 @@
+:root {
+    --error-color: #DC143C;
+    --success-color: #228B22;
+    --warning-color: #FFD700;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    background-color: #778899;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    line-height: 1.5rem;
+}
+
+.container {
+    background-color: #fff;
+    padding: 1rem;
+    border-radius: 5px;
+    width: 25vw;
+}
+
+.form h1 {
+    font-size: 1.5em;
+    text-align: center;
+    margin-bottom: 20px;
+
+}
+
+.form-field {
+    margin-bottom: 10px;
+}
+
+.form-field label {
+    color: #696969;
+}
+
+.form-field input {
+    width: 96%;
+    font-size: 1rem;
+    border: solid 2px #A9A9A9;
+    border-radius: 3px;
+    padding: 2%;
+}
+
+.form-field.error input {
+    border-color: var(--error-color);
+}
+
+.form-field.success input {
+    border-color: var(--success-color);
+}
+
+
+.form-field .error-fields {
+    color: var(--error-color);
+}
+
+.form-field .btn {
+    width: 100%;
+    background: #007bff;
+    color: #fff;
+    text-transform: uppercase;
+    margin: auto;
+    opacity: 0.8;
+}
+
+.form-field .btn:hover {
+    opacity: 1;
+    cursor: pointer;
+}
