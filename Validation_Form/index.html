@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register Form</title>
+    <link rel="stylesheet" href="./assets/css/reset.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <form id="register" class="form">
+            <h1>Đăng ký</h1>
+            <div class="form-field">
+                <label for="email"><b>Email</b></label>
+                <input type="text" placeholder="Email" name="email" id="email" autocomplete="off">
+                <div class="error-fields"></div class="error-fields">
+            </div>
+            <div class="form-field">
+                <label for="username"><b>Họ và tên</b></label>
+                <input type="text" placeholder="Họ và tên" name="username" id="username" autocomplete="off">
+                <div class="error-fields"></div class="error-fields">
+            </div>
+            
+            <div class="form-field">
+                <label for="password"><b>Mật khẩu</b></label>
+                <input type="password" placeholder="********" name="password" id="password" autocomplete="off">
+                <div class="error-fields"></div class="error-fields">
+            </div>
+            <div class="form-field">
+                <label for="confirm-password"><b>Xác nhận mật khẩu</b></label>
+                <input type="password" placeholder="********" name="confirm-password" id="confirm-password" autocomplete="off">
+                <div class="error-fields"></div class="error-fields">
+            </div>
+            
+            <p>Để tạo tài khoản, bạn hãy vui lòng đồng ý với các điều khoản của chúng tôi <a href="#">Terms & Privacy</a>.</p>
+            <div class="form-field">
+                <input class="btn" type="submit" value="Đăng ký">
+            </div>
+            <div class="login">
+                <p>Bạn đã có tài khoản rồi? <a href="#">Đăng nhập</a>.</p>
+            </div>
+        </form>
+    </div>
+    <!-- Nhúng file JavaScript -->
+    <script src="./assets/js/validate.js"></script>
+</body>
+
+</html>
