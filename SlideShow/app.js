@@ -31,7 +31,7 @@ window.addEventListener("load", function () {
         }));
 
         function handleChangeSlideClick(direction) {
-            if(direction == 1) {
+            if(direction === 1) {
                 if(index >= slideLength -1) {
                     index = slideLength -1;
                     return;
