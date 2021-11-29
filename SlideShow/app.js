@@ -39,7 +39,7 @@ window.addEventListener("load", function () {
                 positionX = positionX - sliderItemWidth;
                 sliderMain.style = `transform: translateX(${positionX}px)`
                 index++;
-            } else if(direction == -1) {
+            } else if(direction === -1) {
                 if(index <= 0) {
                     index = 0;
                     return;
